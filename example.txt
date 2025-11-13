@@ -1,0 +1,21 @@
+#Rony
+
+#este es el que tengo para el deployment normal mientra que especifique el msi
+ 
+# Install Teamviewer
+ 
+$assignmentid = "Your assignment ID"
+ 
+$installfile = 'Path to your MSI file\TeamViewer_Host.msi'
+ 
+$configID = "Your Config ID"
+ 
+start-process -filepath msiexec.exe -Wait -ArgumentList "/i `"$installfile`" /qn customconfigid=$configID"
+ 
+sleep 25
+ 
+start-process -filepath "C:\Program Files\teamviewer\teamviewer.exe" -argumentlist "Assignment --id $assignmentid"
+ 
+sleep 25
+ 
+start-process -filepath "C:\Program Files\teamviewer\teamviewer.exe" -argumentlist "customize --id $configID --restart-gui"

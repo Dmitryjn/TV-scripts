@@ -1,0 +1,3 @@
+#Rony este es para la assignacion 
+##Assign device with MDv2## 
+Start-Process -filepath  "C:\Program Files\TeamViewer\TeamViewer.exe" -argumentlist "assignment --id Your_assignment ID
